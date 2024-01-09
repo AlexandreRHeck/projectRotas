@@ -102,6 +102,7 @@ def enderecos():
     return render_template('enderecos.html', enderecos=data)
 
 
+
 @app.route('/atualizar_status', methods=['POST'])
 def atualizar_status():
     conn = get_db_connection()
