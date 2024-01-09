@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciador de Endereços</title>
+</head>
+ <style>
+        .botao {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #45a049;
+        }
+
+        .botao-editar {
+            background-color: #008CBA;
+        }
+
+        .botao-editar:hover {
+            background-color: #007BAA;
+        }
+
+        .botao-deletar {
+            background-color: #f44336;
+        }
+
+        .botao-deletar:hover {
+            background-color: #e3312f;
+        }
+    </style>
+<body>
+    <h1>Gerenciar Endereços</h1>
+
+    <form method="post" action="/add_endereco">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="endereco" placeholder="Endereço">
+        <input type="submit" value="Adicionar Endereço">
+    </form>
+
+    <form method="post" action="/atualizar_enderecos">
+        <ul>
+            {% for endereco in enderecos %}
+                <li>
+                    Nome: {{ endereco[1] }} - Endereço: {{ endereco[2] }}
+                    <input type="checkbox" name="enderecos_selecionados" value="{{ endereco[0] }}">
+                    <a href="/edit/{{ endereco[0] }}" class="botao botao-editar">Editar</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <input type="submit" name="action" value="Deletar Selecionados" class="botao botao-deletar">
+        <input type="submit" name="action" value="Atualizar Status" class="botao">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atualizar Endereço</title>
+</head>
+<body>
+    <h1>Atualizar Endereço</h1>
+    <form method="post" action="/update/{{ endereco[0] }}">
+        <input type="text" name="endereco" value="{{ endereco[1] }}">
+        <input type="submit" value="Atualizar">
+    </form>
+</body>
+</html>

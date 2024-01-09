@@ -1,0 +1,15 @@
+<!-- Exemplo básico -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Endereço</title>
+</head>
+<body>
+    <h1>Editar Endereço</h1>
+    <form method="post" action="{{ url_for('update_address', id=endereco[0]) }}">
+        Nome: <input type="text" name="nome" value="{{ endereco[1] }}">
+        Endereço: <input type="text" name="endereco" value="{{ endereco[2] }}">
+        <input type="submit" value="Salvar Alterações">
+    </form>
+</body>
+</html>

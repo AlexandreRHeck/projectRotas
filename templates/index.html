@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selecione os Endereços</title>
+</head>
+<body>
+    <h1>Endereços Disponíveis</h1>
+    <form method="post" action="/buscar_rota">
+        <ul>
+            {% for endereco in enderecos %}
+                <li>
+                    <input type="checkbox" name="enderecos_selecionados" value="{{ endereco[2] }}">
+                    {{ endereco[1] }} - {{ endereco[2] }}
+                </li>
+            {% endfor %}
+        </ul>
+        <input type="submit" value="Criar Rota com Endereços Selecionados">
+    </form>
+</body>
+</html>

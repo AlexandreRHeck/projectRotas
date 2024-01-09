@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rota Gerada</title>
+</head>
+<body>
+    <h1>Rota Gerada</h1>
+    {% if link.startswith("http") %}
+        <p>Aqui está o link da sua rota: <a href="{{ link }}" target="_blank">{{ link }}</a></p>
+    {% else %}
+        <p>{{ link }}</p>
+    {% endif %}
+</body>
+</html>
