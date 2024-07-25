@@ -46,7 +46,7 @@ import requests
 import webbrowser
 
 # Substitua pela sua chave de API do Google Maps
-API_KEY = 'AIzaSyCEZdV-QYB5ddQfO1I4-7ciI9yAlB3nX3A'
+API_KEY = ''
 
 def geocodificar(endereco):
     geocoding_url = f'https://maps.googleapis.com/maps/api/geocode/json?address={endereco}&key={API_KEY}'
