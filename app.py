@@ -5,10 +5,10 @@ import mysql.connector
 app = Flask(__name__)
 
 # Configurações do MySQL
-MYSQL_DATABASE_HOST = '109.106.251.132'
-MYSQL_DATABASE_USER = 'techeckc_heck'
-MYSQL_DATABASE_PASSWORD = '123456789'
-MYSQL_DATABASE_DB = 'techeckc_askcar'
+MYSQL_DATABASE_HOST = ''
+MYSQL_DATABASE_USER = ''
+MYSQL_DATABASE_PASSWORD = ''
+MYSQL_DATABASE_DB = ''
 
 
 def get_db_connection():
@@ -20,23 +20,9 @@ def get_db_connection():
     )
 
 
-"""# Configurações do MySQL
-app.config['MYSQL_DATABASE_HOST'] = '109.106.251.132'
-app.config['MYSQL_DATABASE_USER'] = 'techeckc_heck'
-app.config['MYSQL_DATABASE_PASSWORD'] = '123456789'
-app.config['MYSQL_DATABASE_DB'] = 'techeckc_askcar'
-
-# Conectar ao MySQL
-mysql = mysql.connector.connect(
-    host=app.config['MYSQL_DATABASE_HOST'],
-    user=app.config['MYSQL_DATABASE_USER'],
-    password=app.config['MYSQL_DATABASE_PASSWORD'],
-    database=app.config['MYSQL_DATABASE_DB']
-)
-"""
 
 # Substitua pela sua chave de API do Google Maps
-API_KEY = 'AIzaSyCEZdV-QYB5ddQfO1I4-7ciI9yAlB3nX3A'
+API_KEY = 
 
 
 @app.route('/')
