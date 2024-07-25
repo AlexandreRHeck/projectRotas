@@ -2,7 +2,7 @@
 import requests
 
 # Chave da API do Google Maps
-API_KEY = 'AIzaSyCEZdV-QYB5ddQfO1I4-7ciI9yAlB3nX3A'
+API_KEY = 
 
 def geocodificar(endereco):
     """ """
@@ -40,7 +40,7 @@ coordenadas = [geocodificar(endereco) for endereco in enderecos]
 # Gerar link para o Google Maps
 link_maps = criar_link_mapas(coordenadas)
 print("Link da Rota no Google Maps:", link_maps)
-""" # API_KEY = 'AIzaSyCEZdV-QYB5ddQfO1I4-7ciI9yAlB3nX3A'
+""" # API_KEY = 
 import tkinter as tk
 import requests
 import webbrowser
